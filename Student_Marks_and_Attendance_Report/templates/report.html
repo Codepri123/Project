@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Report</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg,#667eea,#764ba2);
+            text-align:center;
+            padding:30px;
+        }
+
+        .container{
+            background:white;
+            padding:30px;
+            border-radius:20px;
+            width:80%;
+            margin:auto;
+            box-shadow:0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            color:#333;
+            margin-bottom:20px;
+        }
+
+        img{
+            width:80%;
+            border-radius:15px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        a{
+            display:inline-block;
+            margin-top:20px;
+            padding:10px 20px;
+            background:#3498db;
+            color:white;
+            text-decoration:none;
+            border-radius:30px;
+        }
+
+        a:hover{
+            background:#2980b9;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>📊 Student Marks and Attendance Report</h1>
+
+    <img src="{{ url_for('static', filename='report.png') }}" alt="Report Graph">
+
+    <br>
+
+    <a href="/">🏠 Back to Home</a>
+</div>
+
+</body>
+</html>
+</html>

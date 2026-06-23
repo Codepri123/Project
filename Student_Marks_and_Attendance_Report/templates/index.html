@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Report</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(135deg,#4facfe,#00f2fe);
+            font-family:Arial, sans-serif;
+        }
+
+        .container{
+            background:white;
+            padding:50px;
+            border-radius:20px;
+            text-align:center;
+            box-shadow:0 10px 25px rgba(0,0,0,0.2);
+            animation:fadeIn 1s ease-in-out;
+        }
+
+        h1{
+            color:#2c3e50;
+            margin-bottom:25px;
+            font-size:40px;
+        }
+
+        p{
+            color:#555;
+            margin-bottom:25px;
+            font-size:18px;
+        }
+
+        button{
+            padding:15px 35px;
+            font-size:18px;
+            border:none;
+            border-radius:50px;
+            background:#3498db;
+            color:white;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#2980b9;
+            transform:scale(1.08);
+            box-shadow:0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        @keyframes fadeIn{
+            from{
+                opacity:0;
+                transform:translateY(-30px);
+            }
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>📚 Student Marks & Attendance Report</h1>
+
+        <p>
+            View student performance, marks analysis,
+            and attendance statistics.
+        </p>
+
+        <button onclick="window.location.href='/report'">
+            View Report 📊
+        </button>
+    </div>
+
+</body>
+</html>
