@@ -7,7 +7,6 @@ print("CLICK THE FOLLOWING OPTIONS")
 print("1. ADD,VIEW AND SAVED YOUR DATA IN LIST")
 print("2. DELETE IN A LIST")
 result = int(input("enter a choice::"))
-data=[]
 match result:
     case 1:
         print("ADD AND SAVE A TASK")

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TO DO LIST</title>
+</head>
+<body>
+
+<script>
+document.write("DISCALIMER:<br>");
+document.write("1 TASKS YOU WILL ADD AT ONE TIME<br><br>");
+
+document.write("WELCOME TO YOUR TO DO LIST<br><br>");
+
+document.write("CLICK THE FOLLOWING OPTIONS<br>");
+document.write("1. ADD,VIEW AND SAVED YOUR DATA IN LIST<br>");
+document.write("2. DELETE IN A LIST<br>");
+
+let result = parseInt(prompt("enter a choice::"));
+
+switch(result) {
+    case 1:
+        document.write("ADD AND SAVE A TASK<br>");
+
+        let data = prompt("enter a task");
+
+        function task_assigned(data) {
+            return data;
+        }
+
+        document.write("All data is saved in Database<br>");
+        document.write("<br>");
+        document.write("VIEW YOUR DATA<br>");
+        document.write(task_assigned(data) + "<br>");
+        document.write("<br>");
+        document.write("ALL------data----- is saved<br>");
+        document.write("YOUR DATA IS SAFE AND SECURE...<br>");
+        document.write("REVISIT IN OUR TO DO LIST.....<br>");
+        document.write("<br>YOUR DATA IS SAFE AND SECURE...<br>");
+        document.write("THANK YOU FOR USING OUR TO-DO LIST");
+        break;
+
+    case 2:
+        document.write("DELETE A TASK");
+        break;
+}
+</script>
+
+</body>
+</html>
+```
