@@ -4,44 +4,74 @@
     <title>Student Login</title>
 
     <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
         body{
-            font-family:Arial;
-            background:#f4f4f4;
+            height:100vh;
             display:flex;
             justify-content:center;
             align-items:center;
-            height:100vh;
+
+            background-image:url("{{ url_for('static', filename='images.jpg') }}");
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
         }
 
         .login-box{
-            background:white;
-            padding:30px;
-            border-radius:10px;
-            box-shadow:0 0 10px rgba(0,0,0,0.2);
-            width:350px;
+            width:500px;
+            background:rgba(255,255,255,0.9);
+            padding:40px;
+            border-radius:15px;
+            box-shadow:0 0 20px rgba(0,0,0,0.2);
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:25px;
+        }
+
+        label{
+            display:block;
+            margin-bottom:8px;
+            font-size:20px;
         }
 
         input{
             width:100%;
-            padding:10px;
-            margin-top:5px;
-            margin-bottom:15px;
+            padding:12px;
+            margin-bottom:20px;
+            border:1px solid #ccc;
+            border-radius:5px;
         }
 
         button{
             width:100%;
-            padding:10px;
+            padding:12px;
             background:#007bff;
             color:white;
             border:none;
+            border-radius:5px;
+            font-size:16px;
             cursor:pointer;
+        }
+
+        button:hover{
+            background:#0056b3;
         }
     </style>
 </head>
+
 <body>
 
 <div class="login-box">
-    <h2 align="center">Student Login</h2>
+
+    <h2>Student Login</h2>
 
     <form action="/login" method="POST">
 
@@ -54,6 +84,7 @@
         <button type="submit">Login</button>
 
     </form>
+
 </div>
 
 </body>
