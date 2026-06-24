@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Walmart Sales Dashboard</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#f4f4f4;
+            padding:30px;
+        }
+
+        h1{
+            text-align:center;
+            margin-bottom:30px;
+            color:#333;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:20px;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .chart-box{
+            background:white;
+            margin-top:30px;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        img{
+            width:100%;
+            display:block;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Walmart Sales Data Analyzer</h1>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>Total Revenue</h2>
+            <h3>{{ total_revenue }}</h3>
+        </div>
+
+        <div class="card">
+            <h2>Average Sales</h2>
+            <h3>{{ avg_sales }}</h3>
+        </div>
+
+        <div class="card">
+            <h2>Maximum Sales</h2>
+            <h3>{{ max_sales }}</h3>
+        </div>
+
+        <div class="card">
+            <h2>Minimum Sales</h2>
+            <h3>{{ min_sales }}</h3>
+        </div>
+
+    </div>
+
+    <div class="chart-box">
+        <h2>Sales Charts</h2>
+        <br>
+
+        <img src="{{ url_for('static', filename='sales_charts.png') }}" alt="Sales Charts">
+
+    </div>
+
+</body>
+</html>
