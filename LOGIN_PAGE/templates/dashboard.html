@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+
+    <style>
+
+        /* RESET */
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Segoe UI, sans-serif;
+        }
+
+        /* BACKGROUND */
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        /* MAIN CARD */
+        .container{
+            width:650px;
+            padding:40px;
+            background:rgba(255,255,255,0.15);
+            backdrop-filter: blur(15px);
+            border-radius:25px;
+            border:1px solid rgba(255,255,255,0.3);
+            box-shadow:0 10px 30px rgba(0,0,0,0.3);
+            text-align:center;
+        }
+
+        /* TITLE */
+        h1{
+            color:white;
+            font-size:42px;
+            margin-bottom:25px;
+        }
+
+        /* INFO BOX */
+        .info{
+            background:white;
+            padding:15px;
+            margin:15px 0;
+            border-radius:12px;
+            font-size:22px;
+            font-weight:bold;
+            color:#333;
+        }
+
+        /* STATUS CARD */
+        .status{
+            margin-top:25px;
+            padding:25px;
+            border-radius:15px;
+            font-size:28px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .status:hover{
+            transform:scale(1.05);
+        }
+
+        /* SUBMITTED */
+        .submitted{
+            background:#d4f8df;
+            color:#0f6b2f;
+            border-left:8px solid #28a745;
+        }
+
+        /* NOT SUBMITTED */
+        .not-submitted{
+            background:#ffe0e3;
+            color:#8a1f2d;
+            border-left:8px solid #dc3545;
+        }
+
+        /* FOOTER */
+        .footer{
+            margin-top:20px;
+            color:white;
+            font-size:14px;
+            opacity:0.9;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎓 Student Dashboard</h1>
+
+    <div class="info">
+        Name: {{ name }}
+    </div>
+
+    <div class="info">
+        Roll No: {{ rollno }}
+    </div>
+
+    {% if status|string|lower == 'submitted' %}
+
+        <div class="status submitted">
+            ✅ Assignment Submitted
+        </div>
+
+    {% else %}
+
+        <div class="status not-submitted">
+            ❌ Assignment Not Submitted
+        </div>
+
+    {% endif %}
+
+    <div class="footer">
+        Student Submission Tracking System
+    </div>
+
+</div>
+
+</body>
+</html>
+
