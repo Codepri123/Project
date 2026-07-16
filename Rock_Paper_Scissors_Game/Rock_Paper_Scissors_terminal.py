@@ -40,8 +40,8 @@ print("---------------------------------")
 print("you!!!!! want to play again")
 print("-------------------------------------")
 print("then click -------play again")
-n=input("user enter a decision")
-if n == "play_again":
+n=input("user enter a decision:::::")
+if n == "play":
         play() 
 elif n == "game over":
     print("Game Over!")
